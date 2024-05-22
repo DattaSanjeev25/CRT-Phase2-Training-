@@ -25,6 +25,24 @@ def TreePostorder(root):
     TreePreorder(root.right)
     print(root.data,end="")
 
+def TreeLevelorder(root):
+    if root==None:
+        return None
+    result=[]
+    q=[root]
+    while len(q)>0:
+        n=len(q)
+        sub=[]
+        for i in range(n):
+            curr=q.pop(0)
+            sub.append(curr.data)
+            if curr.left!=None:
+                q.append(curr.left)
+            if curr.right!=None:
+                q.append(curr.right)
+        result.append(sub)
+    return result
+
 root=Node(1)
 n1=Node(2)
 n2=Node(3)
@@ -47,3 +65,6 @@ TreePreorder(root)
 print()
 print("Postorder Traversal")
 TreePostorder(root)
+print()
+print("Levelorder Traversal")
+print(TreeLevelorder(root))
