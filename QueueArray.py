@@ -20,3 +20,4 @@ Deque(Q)
 print(Q)
 Deque(Q)
 print(Q)
+

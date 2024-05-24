@@ -33,6 +33,7 @@ def TreeLevelorder(root):
     while len(q)>0:
         n=len(q)
         sub=[]
+        
         for i in range(n):
             curr=q.pop(0)
             sub.append(curr.data)
